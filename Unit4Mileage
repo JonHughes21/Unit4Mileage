@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Unit4Mileage {
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner (System.in);
+		
+		int miles, gallons;
+		int totalMiles = 0;
+		int totalGallons = 0;
+		
+		System.out.println("Enter the number of miles you have driven or enter -1 to quit: ");
+		miles = input.nextInt();
+		
+		while (miles != -1) {
+			System.out.println("Enter the number of gallons you have used: ");
+			gallons = input.nextInt();
+			totalMiles += miles;
+			totalGallons += gallons;
+			
+			System.out.printf("\nYour miles per gallon this trip is: %f", (double)miles / gallons);
+			System.out.printf("\nYour combined miles per gallon so far is: %f", (double)totalMiles / totalGallons);
+			
+			System.out.println("\nEnter the number of miles you have driven: ");
+			miles = input.nextInt();
+		}
+	}
+}
